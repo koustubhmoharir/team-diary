@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="HomePage.ts" />
     <TypeScriptCompile Include="EditorPage.ts" />
   </ItemGroup>
   <ItemGroup>
