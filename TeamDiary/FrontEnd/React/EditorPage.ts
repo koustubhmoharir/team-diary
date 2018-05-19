@@ -7,7 +7,7 @@
     }
 
     OnSave = () => {
-        if (this.DiaryEntry.Entryid == 0) {
+        if (this.DiaryEntry.EntryID == 0) {
             //Insert new entry
         }
         else {
@@ -30,13 +30,6 @@
     OnSaveComment = () => {
     }
 
-}
-
-class DiaryEntry {
-    Entry: string;
-    Entryid: number;
-    CanEdit: boolean;
-    Comments: CommentDetails[];
 }
 
 class CommentDetails {

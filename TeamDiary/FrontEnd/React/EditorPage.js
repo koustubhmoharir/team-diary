@@ -1,15 +1,13 @@
-var EditorPage = /** @class */ (function () {
+var EditorPage = (function () {
     function EditorPage() {
         var _this = this;
         this.OnLoad = function () {
             //Fetch Diary Entry and Comments
         };
         this.OnSave = function () {
-            if (_this.DiaryEntry.Entryid == 0) {
-                //Insert new entry
+            if (_this.DiaryEntry.EntryID == 0) {
             }
             else {
-                //edit existing entry
             }
         };
         this.OnEdit = function () {
@@ -25,12 +23,7 @@ var EditorPage = /** @class */ (function () {
     }
     return EditorPage;
 }());
-var DiaryEntry = /** @class */ (function () {
-    function DiaryEntry() {
-    }
-    return DiaryEntry;
-}());
-var CommentDetails = /** @class */ (function () {
+var CommentDetails = (function () {
     function CommentDetails() {
     }
     return CommentDetails;

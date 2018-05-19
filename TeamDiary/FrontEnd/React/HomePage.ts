@@ -1,41 +1,35 @@
-﻿class HomePage {
-    DiaryEntries: DiaryEntry[] = [];
+﻿import { observable } from "mobx"
+import { computed } from "mobx"
+import { action } from "mobx"
+
+class HomePage {
+    @observable DiaryEntries: DiaryEntry[] = [];
 
     FilteredDiaryEntries: DiaryEntry[] = [];
 
-    DateFilter: Date;
-    UserFilter: string;
+    @observable DateFilter: Date;
+    @observable UserFilter: string;
 
-    OnLoad = () => {
+    @action OnLoad = () => {
         //load the entries from database
     }
 
-    OnAddEntry = () => {
+    @action OnAddEntry = () => {
         //will load editor page with editing support as true
     }
 
-    OnApplyFilter = () => {
+    @computed OnApplyFilter = () => {
         if (this.UserFilter == null && this.DateFilter == null)
             this.FilteredDiaryEntries = this.DiaryEntries;
         else
             this.FilteredDiaryEntries = this.DiaryEntries.filter(e => (this.UserFilter != null ? e.UserName === this.UserFilter : true) && (this.DateFilter != null ? e.Date === this.DateFilter : true));
     }
 
-    OnSelect = () => {
+    @action OnSelect = () => {
         //will load editor page
     }
 
-
-    OnDeleteEntry = () => {
+    @action OnDeleteEntry = () => {
         //option available only if entry is of same user (CanEditOrDelete = true)
     }
-}
-
-class DiaryEntry {
-    Date: Date;
-    EntryID: number;
-    UserID: number;
-    UserName: string;
-    Details: string;
-    CanEditOrDelete: boolean;
 }
