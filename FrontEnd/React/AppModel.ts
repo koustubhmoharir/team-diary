@@ -7,3 +7,11 @@
     Comments: CommentDetails[];
     CanEditOrDelete: boolean;
 }
+
+class CommentDetails {
+    UserName: string;
+    UserId: number;
+    Comment: string;
+    CanEdit: boolean;
+    Date: Date;
+}

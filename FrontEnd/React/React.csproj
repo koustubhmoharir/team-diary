@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -28,12 +28,16 @@
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app.test.ts" />
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="AppModel.ts" />
+    <TypeScriptCompile Include="FakeAPI.ts" />
     <TypeScriptCompile Include="HomePage.ts" />
+    <TypeScriptCompile Include="EditorPage.test.ts" />
     <TypeScriptCompile Include="EditorPage.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="tsconfig.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -67,14 +71,5 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
-    <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <TypeScriptExperimentalDecorators>True</TypeScriptExperimentalDecorators>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
-    <TypeScriptSourceMap>false</TypeScriptSourceMap>
-  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

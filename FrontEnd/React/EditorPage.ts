@@ -1,4 +1,4 @@
-﻿class EditorPage {
+﻿export class EditorPage {
 
     DiaryEntry: DiaryEntry;
 
@@ -32,15 +32,3 @@
 
 }
 
-class CommentDetails {
-    UserName: string;
-    UserId: number;
-    Comment: string;
-    CanEdit: boolean;
-}
-
-window.onload = () => {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
-    greeter.start();
-};

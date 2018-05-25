@@ -1,14 +1,10 @@
 "use strict";
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = require("tslib");
 var mobx_1 = require("mobx");
 var mobx_2 = require("mobx");
 var mobx_3 = require("mobx");
-var HomePage = (function () {
+var HomePage = /** @class */ (function () {
     function HomePage() {
         var _this = this;
         this.DiaryEntries = [];
@@ -32,30 +28,29 @@ var HomePage = (function () {
             //option available only if entry is of same user (CanEditOrDelete = true)
         };
     }
-    __decorate([
+    tslib_1.__decorate([
         mobx_1.observable
     ], HomePage.prototype, "DiaryEntries", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_1.observable
     ], HomePage.prototype, "DateFilter", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_1.observable
     ], HomePage.prototype, "UserFilter", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_3.action
     ], HomePage.prototype, "OnLoad", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_3.action
     ], HomePage.prototype, "OnAddEntry", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_2.computed
     ], HomePage.prototype, "OnApplyFilter", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_3.action
     ], HomePage.prototype, "OnSelect", void 0);
-    __decorate([
+    tslib_1.__decorate([
         mobx_3.action
     ], HomePage.prototype, "OnDeleteEntry", void 0);
     return HomePage;
 }());
-//# sourceMappingURL=HomePage.js.map

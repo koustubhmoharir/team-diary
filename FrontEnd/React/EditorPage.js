@@ -1,4 +1,6 @@
-var EditorPage = (function () {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var EditorPage = /** @class */ (function () {
     function EditorPage() {
         var _this = this;
         this.OnLoad = function () {
@@ -6,8 +8,10 @@ var EditorPage = (function () {
         };
         this.OnSave = function () {
             if (_this.DiaryEntry.EntryID == 0) {
+                //Insert new entry
             }
             else {
+                //edit existing entry
             }
         };
         this.OnEdit = function () {
@@ -23,14 +27,4 @@ var EditorPage = (function () {
     }
     return EditorPage;
 }());
-var CommentDetails = (function () {
-    function CommentDetails() {
-    }
-    return CommentDetails;
-}());
-window.onload = function () {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
-    greeter.start();
-};
-//# sourceMappingURL=EditorPage.js.map
+exports.EditorPage = EditorPage;
